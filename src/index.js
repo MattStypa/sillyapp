@@ -1,15 +1,6 @@
-import React from 'react';
-import { Router } from 'sillyrouter';
-import { Store } from 'sillystore';
-
-class App extends React.PureComponent {
-  render() {
-    return (
-      <Store initial={this.props.store}>
-        <Router routes={this.props.routes}/>
-      </Store>
-    );
-  }
-}
+import { Link, navigate } from 'sillyrouter';
+import { setStore, connect } from 'sillystore';
+import App from './App.js';
 
 export default App;
+export { Link, navigate, setStore, connect };
